@@ -1,12 +1,12 @@
-import './App.css'
-import WeatherApp from './WeatherApp'
+import "./App.css";
+import WeatherApp from "./components/WeatherApp";
 
 function App() {
   return (
     <>
       <WeatherApp />
     </>
-  )
+  );
 }
 
-export default App
+export default App;

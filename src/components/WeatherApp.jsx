@@ -19,7 +19,7 @@ export default function WeatherApp() {
       ) : (
         <div className="noData">
           <h3>No Data Yet</h3>
-          <p >Search for a city to see weather details 🌤️</p>
+          <p>Search for a city to see weather details 🌤️</p>
         </div>
       )}
     </div>
