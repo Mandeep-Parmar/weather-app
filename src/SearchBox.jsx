@@ -60,13 +60,24 @@ export default function SearchBox({ updateInfo }) {
           value={city}
           onChange={handleChange}
           required
+          sx={{
+            input: { color: "white" },
+
+            "& .MuiOutlinedInput-root": {
+              backgroundColor: "rgba(255,255,255,0.1)",
+            },
+
+            "& .MuiInputLabel-root": {
+              color: "rgba(255,255,255,0.7)",
+            },
+          }}
         />
         <br />
         <br />
         <Button variant="contained" type="submit">
           Search
         </Button>
-        {error && <p style={{color: "red"}}>No such place exist!</p>}
+        {error && <p style={{ color: "red" }}>No such place exist!</p>}
       </form>
     </div>
   );

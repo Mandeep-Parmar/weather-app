@@ -10,16 +10,16 @@ export default function WeatherApp() {
   };
 
   return (
-    <div style={{ textAlign: "center" }}>
-      <h1>Weather App</h1>
+    <div className="appContainer">
+      <h1 className="title">Weather App 🌦️</h1>
       <SearchBox updateInfo={updateInfo} />
-      
+
       {weatherInfo ? (
         <InfoBox info={weatherInfo} />
       ) : (
-        <div style={{ marginTop: "20px", color: "gray" }}>
+        <div className="noData">
           <h3>No Data Yet</h3>
-          <p>Search for a city to see weather details 🌤️</p>
+          <p >Search for a city to see weather details 🌤️</p>
         </div>
       )}
     </div>

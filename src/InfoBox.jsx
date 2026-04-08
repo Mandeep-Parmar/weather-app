@@ -30,7 +30,7 @@ export default function InfoBox({ info }) {
           />
           <CardContent>
             <Typography gutterBottom variant="h5" component="div">
-              {info.city}{" "}
+              {info.city.toUpperCase()}{" "}
               {info.humidity > 80 ? (
                 <ThunderstormIcon />
               ) : info.temp > 15 ? (
@@ -42,15 +42,23 @@ export default function InfoBox({ info }) {
             <Typography
               variant="body2"
               sx={{ color: "text.secondary" }}
-              component={"span"}
+              component={"div"}
+              style={{ color: "white", marginTop: "10px" }}
             >
-              <p>Temperature = {info.temp}&deg;C</p>
-              <p>Humidity = {info.humidity}</p>
-              <p>Min Temp = {info.tempMin}&deg;C</p>
-              <p>Max Temp = {info.tempMax}&deg;C</p>
               <p>
-                The weather can be described as <i>{info.weather}</i> and feels
-                like {info.feelsLike}&deg;C
+                <b>Temperature:</b> {info.temp}&deg;C
+              </p>
+              <p>
+                <b>Humidity:</b> {info.humidity}%
+              </p>
+              <p>
+                <b>Min Temp:</b> {info.tempMin}&deg;C
+              </p>
+              <p>
+                <b>Max Temp:</b> {info.tempMax}&deg;C
+              </p>
+              <p>
+                <b>Weather:</b> <i>{info.weather}</i> (feels like {info.feelsLike}°C)
               </p>
             </Typography>
           </CardContent>
